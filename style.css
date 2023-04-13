@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+}
+
+.top-bar {
+  width: 100%;
+  height: 48px;
+  background: url("./images/top-bar-bg.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.top-bar-notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.hot-offer-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 2px 8px;
+  border-radius: 16px;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.topbar-cta {
+  color: #fff;
+  text-decoration-line: none;
+  border-bottom: 1px solid #fff;
+}
+
+.close-notice-btn {
+  cursor: pointer;
+}
