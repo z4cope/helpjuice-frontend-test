@@ -5,18 +5,22 @@ const navbarCta = document.querySelector(".navbar-cta");
 const navbarWrapper = document.querySelector(".navbar-wrapper");
 const closeNoticeBar = document.querySelector(".close-notice-btn");
 const topBar = document.querySelector(".top-bar");
+const heroSection = document.querySelector(".hero");
 
 closeNoticeBar.addEventListener("click", () => {
   topBar.style.transform = "translateY(-100%)";
   topBar.style.position = "absolute";
+  heroSection.style.minHeight = "88vh";
 });
 
 burgerMenu.addEventListener("click", () => {
   collapsedNavbar.style.left = "0";
+  document.body.style.overflow = "hidden";
 });
 
 closeNavbarBtn.addEventListener("click", () => {
   collapsedNavbar.style.left = "100%";
+  document.body.style.overflow = "scroll";
 });
 
 window.addEventListener("resize", function () {

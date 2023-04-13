@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,8 @@ nav {
   width: 100%;
   font-size: 0.875rem;
   font-weight: 700;
+  z-index: 3;
+  position: relative;
 }
 
 nav a {
@@ -35,7 +38,7 @@ nav a:hover {
 /* Topbar */
 .top-bar {
   width: 100%;
-  min-height: 3rem;
+  min-height: 6vh;
   background: url("./images/top-bar-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -177,25 +180,28 @@ nav a:hover {
 /*Breadcrumbs*/
 .breadcrumbs {
   width: 100%;
-  height: 3.5rem;
+  height: 7vh;
   display: flex;
   align-items: center;
   background: rgba(6, 5, 17, 0.12);
-  border-width: 1px 0;
+  border-width: 1px 0px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5rem);
+  backdrop-filter: blur(30px);
 }
 
 .breadcrumbs-wrapper {
   width: 84%;
   margin: auto;
+  overflow: visible;
 }
 
 .breadcrumbs-wrapper a {
   display: flex;
   gap: 1.25rem;
   align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
 }
 
 .breadcrumbs-wrapper img {
@@ -204,6 +210,123 @@ nav a:hover {
 
 .breadcrumbs-wrapper a:hover img {
   transform: translateX(-0.5rem);
+}
+
+.hero {
+  width: 100%;
+  min-height: 82vh;
+  background-color: #000;
+  margin-top: -3.5rem;
+  padding-top: 3.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero-wrapper {
+  width: 90%;
+  display: flex;
+  position: relative;
+}
+
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  gap: 24px;
+}
+
+.left-neon,
+.right-neon {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  background-repeat: no-repeat;
+}
+
+.left-neon {
+  left: -12%;
+  top: -20%;
+  width: 65%;
+  background: #000 url("./images/neon-left.png");
+  background-size: 120%;
+}
+
+.right-neon {
+  top: -10%;
+  right: -10%;
+  background: #000 url("./images/neon-right.png");
+  background-size: 100%;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 72px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.hero p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  position: relative;
+  width: 70%;
+  align-self: flex-start;
+  color: #b0b0b0;
+}
+
+.author-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.author-details span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.author-details li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.by-auther {
+  color: #b0b0b0;
+}
+
+.publish-time {
+  border-bottom: 2px solid #12b76a;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  width: 10%;
+  position: relative;
+  gap: 24px;
+}
+
+.social-links li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 1220px) {
@@ -235,10 +358,14 @@ nav a:hover {
     background-color: #fff;
     top: 0;
     left: 100%;
-    z-index: 5;
+    z-index: 15;
     padding-top: 2rem;
     transition: all 0.3s ease;
     gap: 3rem;
+  }
+
+  #collapsed-navbar a {
+    color: #000;
   }
 
   #close-mobile-nav {
@@ -256,6 +383,14 @@ nav a:hover {
     font-size: 3em;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  .mobile-nav-links a {
+    color: #000;
+  }
+
+  .hero h1 {
+    font-size: 52px;
   }
 }
 
@@ -284,16 +419,38 @@ nav a:hover {
     color: #000;
   }
 
-  .navbar-cta-links a {
-    color: #000;
-  }
-
   .work-email-form img {
     filter: invert(1);
   }
 
   .work-email-form {
     background: rgb(227, 227, 227);
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .social-links {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .left-neon,
+  .right-neon {
+    background-repeat: no-repeat;
+    top: 25%;
   }
 }
 
@@ -306,5 +463,32 @@ nav a:hover {
   .navbar-cta {
     flex-direction: column;
     margin: 0;
+  }
+
+  .hero-text-wrapper {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero-wrapper {
+    margin: auto;
+    width: 90%;
+  }
+
+  .social-links {
+    width: 90%;
+    margin: 0;
+  }
+
+  .right-neon {
+    display: none;
+  }
+
+  .left-neon {
+    width: 100%;
+    opacity: 0.8;
   }
 }
