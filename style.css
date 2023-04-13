@@ -250,14 +250,14 @@ nav a:hover {
   left: -12%;
   top: -20%;
   width: 65%;
-  background: #000 url("./images/neon-left.png");
+  background: #000 url("./images/neon-left.webp");
   background-size: 120%;
 }
 
 .right-neon {
   top: -10%;
   right: -10%;
-  background: #000 url("./images/neon-right.png");
+  background: #000 url("./images/neon-right.webp");
   background-size: 100%;
 }
 
