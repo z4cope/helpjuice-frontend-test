@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Satoshi", sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -179,7 +179,6 @@ nav a:hover {
 
 /*Breadcrumbs*/
 .breadcrumbs {
-  position: relative;
   width: 100%;
   height: 7vh;
   display: flex;
@@ -188,19 +187,20 @@ nav a:hover {
   border-width: 1px 0px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(80px);
-  z-index: 3;
+  backdrop-filter: blur(30px);
 }
 
 .breadcrumbs-wrapper {
   width: 84%;
   margin: auto;
+  overflow: visible;
 }
 
 .breadcrumbs-wrapper a {
   display: flex;
   gap: 1.25rem;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .breadcrumbs-wrapper img {
@@ -212,7 +212,6 @@ nav a:hover {
 }
 
 .hero {
-  position: relative;
   width: 100%;
   min-height: 82vh;
   background-color: #000;
@@ -226,6 +225,7 @@ nav a:hover {
 .hero-wrapper {
   width: 90%;
   display: flex;
+  position: relative;
 }
 
 .hero-text-wrapper {
@@ -243,22 +243,21 @@ nav a:hover {
   bottom: 0;
   width: 60%;
   background-repeat: no-repeat;
-  opacity: 0.8;
 }
 
 .left-neon {
   left: -12%;
-  top: -45%;
+  top: -20%;
   width: 65%;
+  background: #000 url("./images/neon-left.png");
   background-size: 120%;
-  background-image: url("./images/neon-left.png");
 }
 
 .right-neon {
-  top: -30%;
+  top: -10%;
   right: -10%;
+  background: #000 url("./images/neon-right.png");
   background-size: 100%;
-  background-image: url("./images/neon-right.png");
 }
 
 .hero h1 {
@@ -267,22 +266,21 @@ nav a:hover {
   letter-spacing: -0.02em;
   position: relative;
 }
+
 .hero p {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  z-index: 3;
+  position: relative;
   width: 70%;
   align-self: flex-start;
   color: #b0b0b0;
 }
 
 .author-details {
-  width: 50%;
   display: flex;
   align-items: center;
   gap: 16px;
-  z-index: 3;
 }
 
 .author-details span {
@@ -381,6 +379,10 @@ nav a:hover {
     gap: 1rem;
     flex-wrap: wrap;
   }
+
+  .hero h1 {
+    font-size: 52px;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -419,6 +421,32 @@ nav a:hover {
   .work-email-form {
     background: rgb(227, 227, 227);
   }
+
+  .hero-wrapper {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .social-links {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .left-neon,
+  .right-neon {
+    background-repeat: no-repeat;
+    top: 25%;
+  }
 }
 
 @media screen and (max-width: 490px) {
@@ -430,5 +458,32 @@ nav a:hover {
   .navbar-cta {
     flex-direction: column;
     margin: 0;
+  }
+
+  .hero-text-wrapper {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero-wrapper {
+    margin: auto;
+    width: 90%;
+  }
+
+  .social-links {
+    width: 90%;
+    margin: 0;
+  }
+
+  .right-neon {
+    display: none;
+  }
+
+  .left-neon {
+    width: 100%;
+    opacity: 0.8;
   }
 }
