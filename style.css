@@ -1,23 +1,49 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-nav {
-  width: 100%;
+body {
+  font-family: "Satoshi", sans-serif;
 }
 
+a {
+  text-decoration-line: none;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #0560fc;
+}
+
+/* Topbar */
 .top-bar {
   width: 100%;
   height: 48px;
   background: url("./images/top-bar-bg.png");
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-weight: 600;
+  background-position: center right;
 }
 
 .top-bar-notice {
@@ -25,6 +51,10 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+
+.top-bar-notice p {
+  font-weight: 600;
 }
 
 .hot-offer-badge {
@@ -35,15 +65,106 @@ nav {
   padding: 2px 8px;
   border-radius: 16px;
   gap: 4px;
-  font-weight: 700;
 }
 
 .topbar-cta {
   color: #fff;
-  text-decoration-line: none;
   border-bottom: 1px solid #fff;
 }
 
 .close-notice-btn {
   cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(80px);
+  height: 96px;
+}
+
+.navbar-wrapper {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  transition: all 0.2s ease;
+}
+
+.navbar-cta {
+  display: flex;
+  gap: 32px;
+  margin-left: 34px;
+}
+
+.navbar-cta-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-cta-links .hr {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  height: 24px;
+}
+
+.work-email-form {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0px 4px 0px 12px;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
+  border-radius: 8px;
+  padding: 0px 4px 0px 12px;
+}
+
+.work-email-form label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.work-email-form input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  height: 100%;
+}
+
+.work-email-form input:focus {
+  outline-style: dashed;
+  outline-color: #fff;
+}
+
+.work-email-form button {
+  color: #fff;
+  background: #0560fc;
+  border: 1px solid #0560fc;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 6px;
+  padding: 0px 14px;
+  width: 103px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.work-email-form button:hover {
+  background: transparent;
 }
