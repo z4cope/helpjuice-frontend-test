@@ -201,6 +201,7 @@ nav a:hover {
   gap: 1.25rem;
   align-items: center;
   justify-content: flex-start;
+  overflow: visible;
 }
 
 .breadcrumbs-wrapper img {
@@ -363,6 +364,10 @@ nav a:hover {
     gap: 3rem;
   }
 
+  #collapsed-navbar a {
+    color: #000;
+  }
+
   #close-mobile-nav {
     filter: invert(100%);
     position: absolute;
@@ -378,6 +383,10 @@ nav a:hover {
     font-size: 3em;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  .mobile-nav-links a {
+    color: #000;
   }
 
   .hero h1 {
@@ -407,10 +416,6 @@ nav a:hover {
   }
 
   .mobile-nav-links a {
-    color: #000;
-  }
-
-  .navbar-cta-links a {
     color: #000;
   }
 
