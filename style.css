@@ -35,7 +35,7 @@ nav a:hover {
 /* Topbar */
 .top-bar {
   width: 100%;
-  height: 3rem;
+  min-height: 3rem;
   background: url("./images/top-bar-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@ nav a:hover {
   height: 100%;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 3.5rem;
 }
@@ -107,6 +107,7 @@ nav a:hover {
 
 .navbar-cta {
   display: flex;
+  align-items: center;
   gap: 2rem;
   margin-left: 2.125rem;
 }
@@ -120,6 +121,11 @@ nav a:hover {
 .navbar-cta-links .hr {
   border-right: 0.0625rem solid rgba(255, 255, 255, 0.12);
   height: 1.5rem;
+}
+
+#burger-menu,
+#collapsed-navbar {
+  display: none;
 }
 
 .work-email-form {
@@ -182,7 +188,7 @@ nav a:hover {
 }
 
 .breadcrumbs-wrapper {
-  width: 83%;
+  width: 84%;
   margin: auto;
 }
 
@@ -198,4 +204,107 @@ nav a:hover {
 
 .breadcrumbs-wrapper a:hover img {
   transform: translateX(-0.5rem);
+}
+
+@media screen and (max-width: 1220px) {
+  .navbar-wrapper,
+  .breadcrumbs-wrapper {
+    width: 95%;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .nav-links {
+    display: none;
+  }
+
+  #burger-menu {
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  #collapsed-navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    top: 0;
+    left: 100%;
+    z-index: 5;
+    padding-top: 2rem;
+    transition: all 0.3s ease;
+    gap: 3rem;
+  }
+
+  #close-mobile-nav {
+    filter: invert(100%);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .mobile-nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .top-bar-notice {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem;
+  }
+
+  .top-bar-notice p {
+    text-align: center;
+  }
+
+  .close-notice-btn {
+    position: absolute;
+    right: 2rem;
+    top: 0.8rem;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .mobile-nav-links a {
+    color: #000;
+  }
+
+  .navbar-cta-links a {
+    color: #000;
+  }
+
+  .work-email-form img {
+    filter: invert(1);
+  }
+
+  .work-email-form {
+    background: rgb(227, 227, 227);
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #collapsed-navbar {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
+  .mobile-nav-links,
+  .navbar-cta {
+    flex-direction: column;
+    margin: 0;
+  }
 }
