@@ -719,6 +719,10 @@ a {
     margin: 0;
   }
 
+  .left-neon {
+    top: 0;
+  }
+
   .hero-text-wrapper {
     width: 100%;
   }
