@@ -6,6 +6,9 @@ const navbarWrapper = document.querySelector(".navbar-wrapper");
 const closeNoticeBar = document.querySelector(".close-notice-btn");
 const topBar = document.querySelector(".top-bar");
 const heroSection = document.querySelector(".hero");
+const bodyCopySection = document.querySelector(".body-copy");
+const popupCard = document.querySelector(".popup-card");
+const closePopupCard = document.querySelector("#close-popcard");
 
 closeNoticeBar.addEventListener("click", () => {
   topBar.style.transform = "translateY(-100%)";
@@ -23,6 +26,10 @@ closeNavbarBtn.addEventListener("click", () => {
   document.body.style.overflow = "scroll";
 });
 
+closePopupCard.addEventListener("click", () => {
+  popupCard.style.left = "-150%";
+});
+
 window.addEventListener("resize", function () {
   if (window.innerWidth > 780) {
     burgerMenu.style.order = "3";
@@ -35,3 +42,21 @@ window.addEventListener("resize", function () {
     navbarCta.style.order = "2";
   }
 });
+
+//Helper function for checking if a specific section is in the view or not
+const revealPopupCard = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      popupCard.style.transform = "translateX(0)";
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const options = {
+  rootMargin: "-50px 0px",
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(revealPopupCard, options);
+observer.observe(bodyCopySection);
