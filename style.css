@@ -764,6 +764,15 @@ a {
     opacity: 0.8;
   }
 
+  .popup-card {
+    width: 350px;
+    left: 10px;
+  }
+
+  .popup-card-image {
+    width: 100%;
+  }
+
   .project-sample,
   .blog-text {
     width: 90%;
