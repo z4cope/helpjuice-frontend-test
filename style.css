@@ -468,6 +468,108 @@ nav a:hover {
   border-bottom: 1px solid #0560fc;
 }
 
+/* Features section */
+.features {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 120px 0;
+}
+
+.features-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.features-wrapper h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  color: #101828;
+  width: 75%;
+}
+
+.features-wrapper p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #475467;
+  margin-top: 8px;
+}
+
+.features-cards {
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+  margin-top: 40px;
+}
+
+.feature-card {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  width: 384px;
+  min-height: 480px;
+  margin-right: 32px;
+}
+
+.feature-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 72px;
+}
+
+.feature-card:nth-child(4) img:nth-child(1) {
+  width: 43%;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 24px;
+  gap: 32px;
+  width: 336px;
+  min-height: 350px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+.card-content-wrapper h3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: #fff;
+}
+
+.card-content-wrapper p,
+a {
+  white-space: normal;
+}
+
+.card-content-wrapper p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.card-content-wrapper a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.card-content-wrapper span {
+  margin-right: 13.83px;
+}
+
 @media screen and (max-width: 1220px) {
   .navbar-wrapper,
   .breadcrumbs-wrapper {
@@ -591,6 +693,15 @@ nav a:hover {
     background-repeat: no-repeat;
     top: 25%;
   }
+
+  .features {
+    padding: 60px 0;
+  }
+  .features-wrapper h2 {
+    font-size: 38px;
+    width: 90%;
+    line-height: 50px;
+  }
 }
 
 @media screen and (max-width: 490px) {
@@ -630,13 +741,25 @@ nav a:hover {
     width: 100%;
     opacity: 0.8;
   }
+
   .project-sample,
   .blog-text {
     width: 90%;
   }
+
   .sitation-links {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .features-wrapper h2 {
+    font-size: 28px;
+    width: 90%;
+    line-height: 50px;
+  }
+
+  .features-wrapper {
+    width: 90%;
   }
 }
