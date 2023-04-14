@@ -766,11 +766,16 @@ a {
 
   .popup-card {
     width: 350px;
+    min-height: 500px;
     left: 10px;
   }
 
   .popup-card-image {
     width: 100%;
+  }
+
+  .popup-card-cta {
+    padding-bottom: 1rem;
   }
 
   .project-sample,
