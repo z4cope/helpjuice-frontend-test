@@ -61,6 +61,7 @@ cards.forEach((card) => {
 });
 
 //Helper function for checking if a specific section is in the view or not
+
 const revealPopupCard = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -70,10 +71,21 @@ const revealPopupCard = (entries, observer) => {
   });
 };
 
-const options = {
-  rootMargin: "-50px 0px",
-  threshold: 0.5,
-};
+let options = {};
+
+if (window.innerWidth >= 1024) {
+  // for desktop screens
+  options = {
+    rootMargin: "-30px 0px",
+    threshold: 0.5,
+  };
+} else {
+  // for mobile screens
+  options = {
+    rootMargin: "10px 0px",
+    threshold: 0.1,
+  };
+}
 
 const observer = new IntersectionObserver(revealPopupCard, options);
 observer.observe(bodyCopySection);
