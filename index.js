@@ -1,3 +1,4 @@
+import { cards } from "./cards.js";
 const burgerMenu = document.querySelector("#burger-menu");
 const collapsedNavbar = document.querySelector("#collapsed-navbar");
 const closeNavbarBtn = document.querySelector("#close-mobile-nav");
@@ -9,6 +10,7 @@ const heroSection = document.querySelector(".hero");
 const bodyCopySection = document.querySelector(".body-copy");
 const popupCard = document.querySelector(".popup-card");
 const closePopupCard = document.querySelector("#close-popcard");
+const featuresCards = document.querySelector(".features-cards");
 
 closeNoticeBar.addEventListener("click", () => {
   topBar.style.transform = "translateY(-100%)";
@@ -41,6 +43,21 @@ window.addEventListener("resize", function () {
     navbarWrapper.appendChild(navbarCta);
     navbarCta.style.order = "2";
   }
+});
+
+cards.forEach((card) => {
+  featuresCards.innerHTML += `
+    <div class="feature-card" style="background-color: ${card.bgColor}">
+      <div class="feature-card-wrapper">
+        <img src=${card.logoUrl} alt=${card.cardText}/>
+        <div class="card-content-wrapper">
+          <h3>${card.cardTitle}</h3>
+          <p>${card.cardText}</p>
+          <a class="learn-more-btn" href="#"><span>Learn More</span><img src="./images/arrow-up.png" /></a>
+        </div>
+      </div>
+    </div>
+  `;
 });
 
 //Helper function for checking if a specific section is in the view or not
