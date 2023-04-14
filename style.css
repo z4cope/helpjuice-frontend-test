@@ -630,4 +630,13 @@ nav a:hover {
     width: 100%;
     opacity: 0.8;
   }
+  .project-sample,
+  .blog-text {
+    width: 90%;
+  }
+  .sitation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
