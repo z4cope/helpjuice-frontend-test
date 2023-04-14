@@ -668,6 +668,10 @@ a {
     background: rgb(227, 227, 227);
   }
 
+  .breadcrumbs {
+    background: rgba(6, 5, 17, 0.92);
+  }
+
   .hero-wrapper {
     flex-direction: column;
     width: 95%;
