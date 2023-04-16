@@ -148,7 +148,7 @@ Feel free to check the [issues page](https://github.com/z4cope/helpjuice-fronten
 
 <!-- CREDITS -->
 
-## Credits <a name="credits"></a
+## Credits <a name="credits"></a>
 
 - The original design ideal by [Helpjuice](https://helpjuice.com/)
 - Figma design [Figma design](https://www.figma.com/file/kJoQsbzvFwGvrfIUFNLrho/Frontend-Test-V2?node-id=0-1&t=ZDXeFAVPt5PUYIKa-0)
