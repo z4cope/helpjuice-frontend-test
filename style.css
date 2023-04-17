@@ -243,9 +243,10 @@ nav a:hover {
 }
 
 .hero-wrapper {
-  width: 90%;
+  width: 75%;
   display: flex;
   position: relative;
+  margin: auto;
 }
 
 .hero-text-wrapper {
@@ -582,6 +583,55 @@ a {
 
 .card-content-wrapper span {
   margin-right: 13.83px;
+}
+
+@media screen and (min-width: 1450px) {
+  nav {
+    position: static;
+  }
+
+  .navbar-wrapper {
+    width: 95%;
+  }
+
+  .breadcrumbs-wrapper {
+    width: 94%;
+  }
+
+  .top-bar {
+    height: 6vh;
+  }
+
+  .navbar {
+    min-height: 10vh;
+  }
+
+  .hero {
+    min-height: 70vh;
+    position: relative;
+    overflow: visible;
+  }
+
+  .breadcrumbs {
+    position: absolute;
+    top: 16vh;
+    z-index: 5;
+  }
+
+  .hero-wrapper {
+    width: 75%;
+  }
+
+  .left-neon,
+  .right-neon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
+
+  .right-neon {
+    background-position-y: 70%;
+  }
 }
 
 @media screen and (max-width: 1220px) {
