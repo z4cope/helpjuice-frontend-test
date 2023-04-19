@@ -140,6 +140,18 @@ nav a:hover {
   gap: 1.5rem;
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #becbfd, #a3c5f2, #9fd7e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #becbfd, #a3c5f2, #9fd7e9);
+}
+
 .navbar-cta-links .hr {
   border-right: 0.0625rem solid rgba(255, 255, 255, 0.12);
   height: 1.5rem;
